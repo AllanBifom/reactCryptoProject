@@ -2,20 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router, Routes as Switch, Route, Link} from 'react-router-dom'
-import { Navbar, Homepage, Exchanges, News, Cryptocurrencies, Cryptodetails } from './components';
-import 'antd/dist/antd.css';
+import { BrowserRouter as Router} from 'react-router-dom';
+import { Provider } from 'react-redux'
+import 'antd/dist/antd.min.css';
+import store from './app/store';
 
 ReactDOM.render(
   <Router>
-     <Switch>
-      <Route exact path="/" element={<App/>} />
-      <Route exact path="/exchanges" element={<Exchanges/>} />
-      <Route exact path="/news" element={<News/>} />
-      <Route exact path="/cryptocurrencies" element={<Cryptocurrencies/>} />
-      <Route exact path="/cryptodetails" element={<Cryptodetails/>} />
-              
-    </Switch>
+    <Provider store={store}>
+      <App/>
+    </Provider>
   </Router>,
   document.getElementById('root')
 );

@@ -4,10 +4,7 @@ import '../App.css'
 
 const Exchanges = () => {
   return( 
-  <div>
-    <div className='navbar'>
-        <Navbar/>
-    </div>
+  <div> Exchanges
     </div>
     
   );

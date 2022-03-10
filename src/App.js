@@ -13,11 +13,29 @@ function App() {
         <Navbar />
       </div>
       <div className="main">
-        Homepage
-      </div>
-      <div className="footer">
+        <Layout>
+          <Switch>
+            <Route exact path="/" element={<Homepage/>} />
+            <Route exact path="/exchanges" element={<Exchanges/>} />
+            <Route exact path="/news" element={<News/>} />
+            <Route exact path="/cryptocurrencies" element={<Cryptocurrencies/>} />
+            <Route exact path="/crypto/:coinId" element={<Cryptodetails/>} />
+          </Switch>
+        </Layout>
 
+      <div className="footer" >
+            <Typography.Title level ={5} style={{color:'aliceblue', textAlign:'center'}}>
+              AllansCryptoWorld <br/>
+              All rights reserved
+            </Typography.Title>
+            <Space>
+              <Link to="/">Home</Link>
+              <Link to="/exchanges">Exchanges</Link>
+              <Link to="/news">News</Link>
+
+            </Space>
       </div>
+    </div>
     </div>
   );
 }
