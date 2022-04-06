@@ -56,6 +56,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
         {
             ticks: {
             beginAtZero: true,
+            backgroundColor: 'rgba(20,20,20,0.5)'
             },
         },
         ],

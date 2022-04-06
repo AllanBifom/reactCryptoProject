@@ -17,23 +17,23 @@ const Homepage = () => {
 
     if(isFetching) return <Loader/>;
     return (
-    <div>  
-        <Title level={2} className="heading">
+    <div style={{backgroundColor: 'rgba(220, 220, 255, 0.7)'}}>  
+        <Title level={2} className="heading" >
             World Round Crypto Statistics
         </Title>
-        <Row>
-            <Col span={12}><Statistic title="Total Crypto Currencies" value={millify(globalStatistics.total)} /></Col>
-            <Col span={12}><Statistic title="Total Exchanges" value={millify(globalStatistics.totalExchanges)}/></Col>
-            <Col span={12}><Statistic title="Total Markets" value={millify(globalStatistics.totalMarkets)}/></Col>
-            <Col span={12}><Statistic title="Total Market Cap" value={millify(globalStatistics.totalMarketCap)}/></Col>
-            <Col span={12}><Statistic title="Total 24hrs Volume" value={millify(globalStatistics.total24hVolume)}/></Col>
+        <Row >
+            <Col span={12}><Statistic type="secondary" title="Total Crypto Currencies" value={millify(globalStatistics.total)}  /></Col>
+            <Col span={12}><Statistic title="Total Exchanges" value={millify(globalStatistics.totalExchanges)}  /></Col>
+            <Col span={12}><Statistic title="Total Markets" value={millify(globalStatistics.totalMarkets)} /></Col>
+            <Col span={12}><Statistic title="Total Market Cap" value={millify(globalStatistics.totalMarketCap)} /></Col>
+            <Col span={12}><Statistic title="Total 24hrs Volume" value={millify(globalStatistics.total24hVolume)} /></Col>
         </Row>
-        <div className='home-heading-container'>
+        <div className='home-heading-container' >
             <Title level={2} className="home-title" >Top 12 Cryptocurrencies in the World</Title>
-            <Title level={3} className="show-more" ><Link to="/cryptocurrencies">Show More</Link> </Title>
+            <Title level={3} className="show-more"  ><Link to="/cryptocurrencies">Show More</Link> </Title>
         </div>
         <Cryptocurrencies simplified />
-        <div className='home-heading-container'>
+        <div className='home-heading-container' >
             <Title level={2} className="home-title" >Latest News about Crypto</Title>
             <Title level={3} className="show-more" ><Link to="/news">Show More</Link> </Title>
         </div>

@@ -29,8 +29,8 @@ const Navbar = () => {
     }, [screenSize])
 
     return (
-    <div className="nav-container">
-        <div className="logocontainer">
+    <div className="nav-container" >
+        <div className="logocontainer" >
             <Avatar src={icon} size="large" />
             <Typography.Title level={2} className="logo">
                 <Link to="/">AllansCryptoWorld</Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
                 <MenuOutlined/>
             </Button>
         </div>
-        {activeMenu && (<Menu theme="dark" style={{backgroundColor: 'rgb(15,15,30)'}}>
+        {activeMenu && (<Menu theme="dark" >
             <Menu.Item icon={<HomeOutlined />}>
                 <Link to="/">Home</Link>
             </Menu.Item>

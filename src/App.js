@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+
 import React from 'react';
 import './App.css';
 import {Routes as Switch, Route, Link} from 'react-router-dom';
 import {Layout, Typography, Space} from 'antd'
 
-import { Navbar, Homepage, Exchanges, News, Cryptocurrencies, Cryptodetails } from './components';
+import { Navbar, Homepage, Exchanges, News, Cryptocurrencies, Cryptodetails, Exchangedetails } from './components';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="main">
+      <div className="main" style={{backgroundColor: 'rgba(220, 220, 255, 0.7)'}}>
         <Layout>
           <Switch>
             <Route exact path="/" element={<Homepage/>} />
@@ -20,6 +20,7 @@ function App() {
             <Route exact path="/news" element={<News/>} />
             <Route exact path="/cryptocurrencies" element={<Cryptocurrencies/>} />
             <Route exact path="/crypto/:coinId" element={<Cryptodetails/>} />
+            <Route exact path="/exchange/:coinId" element={<Exchangedetails/>} />
           </Switch>
         </Layout>
 

@@ -23,13 +23,13 @@ const Cryptocurrencies = ( { simplified }) => {
   }
   return(
     
-    <>
+    <div style={{backgroundColor: 'rgba(220, 220, 255, 0.7)'}}>
       {!simplified && (
         <div className='search-crypto'>
         <Input placeholder='Search Cryptocurrency' onChange={(e) => setSearchTerm(e.target.value)}/>
         </div>)}
         
-        <Row gutter={[32, 32]} classNmae="crypto-card-container">
+        <Row gutter={[32, 32]} className="crypto-card-container">
             {cryptos?.map((currency) => ( 
               <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
                   <Link to={`/crypto/${currency.uuid}`}>
@@ -52,7 +52,7 @@ const Cryptocurrencies = ( { simplified }) => {
               </Col>
             ))}
         </Row>
-    </>);
+    </div>);
 };
 
 export default Cryptocurrencies;
